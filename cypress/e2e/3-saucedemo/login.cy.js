@@ -16,5 +16,6 @@ describe('Failed Login', () => {
     cy.get('#password').type('password')
     cy.get('[data-test="login-button"]').click()
     cy.get('[data-test="error"]').should('be.visible')
+    cy.get('[data-test="error"]').should('contain.text', 'Epic sadface: Username and password do not match any user in this service')
   })
 })
